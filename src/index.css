@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* if I put body background to white
+ h1
+  color: #090909;
+h3
+  color: #121212;
+p
+  color: #252525;
+*/
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Special Elite', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000000;
 }
 
 code {
@@ -18,16 +32,16 @@ code {
 h1{
   font-size: 3rem;
   line-height: 1;
-  color: #090909;
+  color: #fff;
 }
 
 h3{
   font-size: 2rem;
   line-height: 2.25rem;
-  color: #121212;
+  color: #333;
 }
 
 
 p{
-  color: #252525;
+  color: #333;
 }
