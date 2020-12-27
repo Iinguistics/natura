@@ -103,12 +103,12 @@ const Category = () => {
                 <div className="content hidden lg:block"> 
                 <Link to=""><img src={ volcanoeImg } alt ="errupting volcanoe" /></Link>
                 <div className="overlay">
-                    <div className="text">Volcanoes</div>
+                    <div className="text">Volcanoe's</div>
                 </div>
                 </div>
                 <div className="content lg:hidden">
                 <Link to=""><img src={ volcanoeImg } alt ="errupting volcanoe" /></Link>
-                <div className="text">Volcanoes</div>
+                <div className="text">Volcanoe's</div>
                 </div>
 
                 <div className="content hidden lg:block"> 
