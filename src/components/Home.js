@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import arrow from '../assets/home/down-arrow.png';
 import Category from './Category';
 

@@ -60,3 +60,15 @@ h3{
 p{
   color: #333;
 }
+
+
+.map{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.location-icon{
+  font-size: 2rem;
+  color: red;
+}
