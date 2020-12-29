@@ -61,6 +61,10 @@ p{
   color: #333;
 }
 
+li{
+  list-style: none;
+}
+
 
 .map{
   width: 100vw;
@@ -72,3 +76,17 @@ p{
   font-size: 1.7rem;
   color: red;
 }
+
+
+.location-info{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 350px;
+  min-height: 225px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 5px;
+  font-size: 18px;
+}
+

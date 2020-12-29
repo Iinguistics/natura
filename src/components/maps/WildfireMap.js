@@ -2,14 +2,18 @@ import { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { nasaKey, googleKey } from '../../keys';
 import LocationMarker from '../LocationMarker';
+import LocationInfo from '../LocationInfo';
+
 
 const WildfireMap = ({ events, center, zoom }) => {
-    const [loading, setLoading] = useState(false);
+    const [locationInfo, setLocationInfo] = useState(null);
 
     
     const markers = events.map((ev)=>{
        if(ev.categories[0].id === 8){
-           return  <LocationMarker lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]} />
+           return  <LocationMarker lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]}
+           onClick={()=> setLocationInfo({ id: ev.id, title: ev.title })}
+           />
 
        }else{
            return null;
@@ -29,6 +33,7 @@ const WildfireMap = ({ events, center, zoom }) => {
             >
                  {markers}
             </GoogleMapReact>
+            {locationInfo && <LocationInfo info={locationInfo} />}
         </div>
     )
 }
