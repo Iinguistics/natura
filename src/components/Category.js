@@ -16,7 +16,7 @@ import wildFireImg from '../assets/category/natura-wild-fire-1.jpg';
 
 
 const Category = () => {
-  
+  let num = 8;
    
     return (
         <Fragment>
@@ -123,13 +123,15 @@ const Category = () => {
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ wildFireImg } alt ="wild fire" /></Link>
+                <Link to={`/map/${num}`}><img src={ wildFireImg } alt ="wild fire" />
                 <div className="overlay">
                     <div className="text">Wild Fire's</div>
                 </div>
+                </Link>
+                
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ wildFireImg } alt ="wild fire" /></Link>
+                <Link to="/map/8"><img src={ wildFireImg } alt ="wild fire" /></Link>
                 <div className="text">Wild Fire's</div>
                 </div>
 

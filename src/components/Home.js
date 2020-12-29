@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
 import arrow from '../assets/home/down-arrow.png';
 import Category from './Category';
 
 
 const Home = () => {
+  
     return (
         <div>
          <div className="text-center mt-48 2xl:mt-56 h-screen">
@@ -16,7 +16,7 @@ const Home = () => {
         </div>
 
             <div id="categories" className="mb-5">
-            <Category  />
+            <Category />
             </div>
         </div>
         
