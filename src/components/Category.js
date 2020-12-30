@@ -15,8 +15,11 @@ import waterColorImg from '../assets/category/natura-water-color-1.jpg';
 import wildFireImg from '../assets/category/natura-wild-fire-1.jpg';
 
 
-const Category = () => {
-  let num = 8;
+const Category = ({ eventId }) => {
+   
+    const categoryHandler = (id)=>{
+          return eventId(id)
+    }
    
     return (
         <Fragment>
@@ -57,14 +60,16 @@ const Category = () => {
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ seaLakeIceImg } alt ="sea lake and ice" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
                 <div className="overlay">
                     <div className="text">Sea & Lake Ice</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ seaLakeIceImg } alt ="sea lake and ice" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
                 <div className="text text-black">Sea & Lake Ice</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
@@ -112,27 +117,28 @@ const Category = () => {
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ waterColorImg } alt ="red tide" /></Link>
+                <Link to="test"><img src={ waterColorImg } alt ="red tide" />
                 <div className="overlay">
                     <div className="text">Water Color</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ waterColorImg } alt ="red tide" /></Link>
+                <Link to="/test"><img src={ waterColorImg } alt ="red tide" /></Link>
                 <div className="text">Water Color</div>
                 </div>
 
-                <div className="content hidden lg:block"> 
-                <Link to={`/map/${num}`}><img src={ wildFireImg } alt ="wild fire" />
+                <div className="content hidden lg:block" > 
+                <Link to="/map" onClick={ ()=> categoryHandler(8)}><img src={ wildFireImg } alt ="wild fire" />
                 <div className="overlay">
                     <div className="text">Wild Fire's</div>
                 </div>
                 </Link>
-                
                 </div>
                 <div className="content lg:hidden">
-                <Link to="/map/8"><img src={ wildFireImg } alt ="wild fire" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler(8)}><img src={ wildFireImg } alt ="wild fire" />
                 <div className="text">Wild Fire's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 

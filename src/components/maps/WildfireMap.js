@@ -5,12 +5,12 @@ import LocationMarker from '../LocationMarker';
 import LocationInfo from '../LocationInfo';
 
 
-const WildfireMap = ({ events, center, zoom }) => {
+const WildfireMap = ({ events, center, zoom, categoryId }) => {
     const [locationInfo, setLocationInfo] = useState(null);
 
     
     const markers = events.map((ev)=>{
-       if(ev.categories[0].id === 8){
+       if(ev.categories[0].id === categoryId){
            return  <LocationMarker lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]}
            onClick={()=> setLocationInfo({ id: ev.id, title: ev.title })}
            />
@@ -20,9 +20,8 @@ const WildfireMap = ({ events, center, zoom }) => {
        }
     });
 
-      
         
-
+        
 
     return (
         <div className="map">

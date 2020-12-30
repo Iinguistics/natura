@@ -2,7 +2,11 @@ import arrow from '../assets/home/down-arrow.png';
 import Category from './Category';
 
 
-const Home = () => {
+const Home = ({ homeEventId }) => {
+
+    const test = (id)=>{
+       homeEventId(id);
+    }
   
     return (
         <div>
@@ -15,8 +19,8 @@ const Home = () => {
             </div>
         </div>
 
-            <div id="categories" className="mb-5">
-            <Category />
+        <div id="categories" className="mb-5">
+            <Category eventId={test}/>
             </div>
         </div>
         

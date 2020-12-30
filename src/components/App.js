@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
+import Category from './Category';
 import WildfireMap from './maps/WildfireMap';
 
 
-function App({match}) {
+function App() {
   const [eventData, setEventData] = useState([]);
+  const [eventId, setEventId] = useState(null);
 
   
   useEffect(()=>{
@@ -17,20 +19,28 @@ function App({match}) {
 
     fetchEvents();
 
-    console.log(eventData);
+    
 
   }, []);
 
-  console.log(match)
+   
+  const eventIdHandler = (id)=>{
+      setEventId(id);
+  };
 
+  console.log(eventId)
   return (
     <Router>
-            <div className="container m-auto">
-            <Route path="/" exact component={Home} />
-            <Route path="/map/:id"  component={() => <WildfireMap events={eventData} />} />
+      <Switch>
+        <div>
+
+      <div className="container m-auto">
+            <Route path="/" exact component={() => <Home events={eventData} homeEventId={eventIdHandler} />} />
             </div>
-           
-        </Router>
+            <Route path="/map" exact component={() => <WildfireMap events={eventData} categoryId={eventId} />} />
+            </div>
+      </Switch>
+    </Router>
   );
 }
 
