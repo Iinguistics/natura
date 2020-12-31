@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { nasaKey, googleKey } from '../../keys';
 import LocationMarker from '../LocationMarker';
@@ -10,17 +10,6 @@ const WildfireMap = ({ events, center, zoom, categoryId }) => {
     const [eventData, setEventData] = useState([]);
 
 
-    // useEffect(()=>{
-    //     const fetchEvents = async()=>{
-    //        const res  = await fetch(`https://eonet.sci.gsfc.nasa.gov/api/v3/categories/${categoryId}`);
-    //        const { events } = await res.json();
-    //        setEventData(events);
-    //     }
-    
-    //     fetchEvents();
-    
-    //   }, [categoryId]);
-    //     console.log(eventData);
 
     if(!events === null){
         console.log('no info')

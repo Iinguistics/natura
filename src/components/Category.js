@@ -27,84 +27,94 @@ const Category = ({ eventId }) => {
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
 
                 <div className="content hidden lg:block"> 
-                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ floodImg } alt ="flooding" />
+                <Link to="/map" onClick={()=>categoryHandler("floods")}><img src={ floodImg } alt ="flooding" />
                 <div className="overlay">
                     <div className="text">Flooding</div>
                 </div>
                 </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ floodImg } alt ="flooding" />
+                <Link to="/map" onClick={()=>categoryHandler("floods")}><img src={ floodImg } alt ="flooding" />
                 <div className="text">Flooding</div>
                 </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ dustImg } alt ="dust"  /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("dustHaze")}><img src={ dustImg } alt ="dust"  />
                 <div className="overlay">
                     <div className="text">Dust & Haze</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ dustImg } alt ="dust" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("dustHaze")}><img src={ dustImg } alt ="dust" />
                 <div className="text">Dust & Haze</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ quakeImg } alt ="shattered building from quake" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("earthquakes")}><img src={ quakeImg } alt ="shattered building from quake" />
                 <div className="overlay">
                     <div className="text">Earthquake's</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ quakeImg } alt ="shattered building from quake" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("earthquakes")}><img src={ quakeImg } alt ="shattered building from quake" />
                 <div className="text">Earthquake's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
+                <Link to="/map" onClick={()=>categoryHandler("seaLakeIce")}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
                 <div className="overlay">
                     <div className="text">Sea & Lake Ice</div>
                 </div>
                 </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
+                <Link to="/map" onClick={()=>categoryHandler("seaLakeIce")}><img src={ seaLakeIceImg } alt ="sea lake and ice" />
                 <div className="text text-black">Sea & Lake Ice</div>
                 </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ severeStormImg } alt ="storms" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("severeStorms")}><img src={ severeStormImg } alt ="storms" />
                 <div className="overlay">
                     <div className="text">Severe Storm's</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ severeStormImg } alt ="storms" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("severeStorms")}><img src={ severeStormImg } alt ="storms" />
                 <div className="text">Severe Storm's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ snowImg } alt ="snow" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("snow")}><img src={ snowImg } alt ="snow" />
                 <div className="overlay">
                     <div className="text">Snow</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ snowImg } alt ="snow" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("snow")}><img src={ snowImg } alt ="snow" />
                 <div className="text text-black">Snow</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ tempExtremeImg } alt ="heat wave" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("tempExtremes")}><img src={ tempExtremeImg } alt ="heat wave" />
                 <div className="overlay">
                     <div className="text">Extreme Temperature's</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ tempExtremeImg } alt ="heat wave" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("tempExtremes")}><img src={ tempExtremeImg } alt ="heat wave" />
                 <div className="text">Extreme Temprature's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
@@ -146,25 +156,29 @@ const Category = ({ eventId }) => {
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ landSlideImg } alt ="landslide" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("landslides")}><img src={ landSlideImg } alt ="landslide" />
                 <div className="overlay">
                     <div className="text">Landslide's</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ landSlideImg } alt ="landslide" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("landslides")}><img src={ landSlideImg } alt ="landslide" />
                 <div className="text">Landslide's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ droughtImg } alt ="boats on dry land" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("drought")}><img src={ droughtImg } alt ="boats on dry land" />
                 <div className="overlay">
                     <div className="text">Drought</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ droughtImg } alt ="boats on dry land" /></Link>
+                <Link to="/map" onClick={()=> categoryHandler("drought")}><img src={ droughtImg } alt ="boats on dry land" />
                 <div className="text">Drought</div>
+                </Link>
                 </div>
               
                 </div>
