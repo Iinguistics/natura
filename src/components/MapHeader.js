@@ -4,8 +4,8 @@ const MapHeader = ({events, categoryName}) => {
 
     return (
         <header className="header text-center">
-            {events.length === 0 ?  (<h1>There are no current {categoryName} event's at this time.</h1>): (
-             <h1>{ categoryName } event's</h1>
+            {events.length === 0 ?  (<h1 className="text-lg lg:text-3xl">There are no current {categoryName} event's at this time.</h1>): (
+             <h1 className="text-lg lg:text-3xl">{ categoryName } event's</h1>
             )
             }
 
