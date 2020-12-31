@@ -27,14 +27,16 @@ const Category = ({ eventId }) => {
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ floodImg } alt ="flooding" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler(15)}><img src={ floodImg } alt ="flooding" />
                 <div className="overlay">
                     <div className="text">Flooding</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ floodImg } alt ="flooding" /></Link>
+                <Link to=""><img src={ floodImg } alt ="flooding" />
                 <div className="text">Flooding</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
@@ -106,37 +108,39 @@ const Category = ({ eventId }) => {
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to=""><img src={ volcanoeImg } alt ="errupting volcanoe" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("volcanoes")}><img src={ volcanoeImg } alt ="errupting volcanoe" />
                 <div className="overlay">
                     <div className="text">Volcanoe's</div>
                 </div>
+                </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to=""><img src={ volcanoeImg } alt ="errupting volcanoe" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("volcanoes")}><img src={ volcanoeImg } alt ="errupting volcanoe" />
                 <div className="text">Volcanoe's</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block"> 
-                <Link to="test"><img src={ waterColorImg } alt ="red tide" />
+                <Link to="/map" onClick={()=>categoryHandler("waterColor")}><img src={ waterColorImg } alt ="red tide" />
                 <div className="overlay">
                     <div className="text">Water Color</div>
                 </div>
                 </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to="/test"><img src={ waterColorImg } alt ="red tide" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("waterColor")}><img src={ waterColorImg } alt ="red tide" /></Link>
                 <div className="text">Water Color</div>
                 </div>
 
                 <div className="content hidden lg:block" > 
-                <Link to="/map" onClick={ ()=> categoryHandler(8)}><img src={ wildFireImg } alt ="wild fire" />
+                <Link to="/map" onClick={ ()=> categoryHandler("wildfires")}><img src={ wildFireImg } alt ="wild fire" />
                 <div className="overlay">
                     <div className="text">Wild Fire's</div>
                 </div>
                 </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to="/map" onClick={()=> categoryHandler(8)}><img src={ wildFireImg } alt ="wild fire" />
+                <Link to="/map" onClick={()=> categoryHandler("wildfires")}><img src={ wildFireImg } alt ="wild fire" />
                 <div className="text">Wild Fire's</div>
                 </Link>
                 </div>

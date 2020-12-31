@@ -80,7 +80,7 @@ li{
 
 .location-info{
   position: absolute;
-  top: 50px;
+  top: 100px;
   right: 50px;
   width: 350px;
   min-height: 225px;
@@ -88,5 +88,20 @@ li{
   background-color: rgba(0,0,0,0.6);
   border-radius: 5px;
   font-size: 18px;
+}
+
+
+.header{
+  padding: 7px;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+.header h1{
+  font-size: 36px;
 }
 
