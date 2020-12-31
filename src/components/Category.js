@@ -20,6 +20,7 @@ const Category = ({ eventId }) => {
     const categoryHandler = (id)=>{
           return eventId(id)
     }
+
    
     return (
         <Fragment>

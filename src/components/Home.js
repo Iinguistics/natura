@@ -4,9 +4,6 @@ import Category from './Category';
 
 const Home = ({ homeEventId }) => {
 
-    const test = (id)=>{
-       homeEventId(id);
-    }
   
     return (
         <div>
@@ -20,7 +17,7 @@ const Home = ({ homeEventId }) => {
         </div>
 
         <div id="categories" className="mb-5">
-            <Category eventId={test}/>
+            <Category eventId={homeEventId} />
             </div>
         </div>
         

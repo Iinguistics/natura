@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
-import WildfireMap from './maps/WildfireMap';
+import Map from './Map';
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
        setEventData(events);
   };
 
+ 
   
   return (
     <Router>
@@ -24,7 +25,7 @@ function App() {
       <div className="container m-auto">
             <Route path="/" exact component={() => <Home events={eventData} homeEventId={eventIdHandler} />} />
             </div>
-            <Route path="/map" exact component={() => <WildfireMap events={eventData} categoryId={eventId} />} />
+            <Route path="/map" exact component={() => <Map events={eventData} categoryId={eventId} />} />
             </div>
       </Switch>
     </Router>
