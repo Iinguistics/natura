@@ -1,6 +1,6 @@
 import { useState, Fragment } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { nasaKey, googleKey } from '../keys';
+//import { nasaKey, googleKey } from '../keys';
 import LocationMarker from './LocationMarker';
 import LocationInfo from './LocationInfo';
 import MapHeader from './MapHeader';
