@@ -7,8 +7,6 @@ import MapHeader from '../MapHeader';
 
 const WildfireMap = ({ events, center, zoom, categoryId }) => {
     const [locationInfo, setLocationInfo] = useState(null);
-    const [eventData, setEventData] = useState([]);
-
 
 
     if(!events === null){
@@ -20,16 +18,12 @@ const WildfireMap = ({ events, center, zoom, categoryId }) => {
                 onClick={()=> setLocationInfo({ id: ev.id, title: ev.title })}
                 />
             }
-            
      });
     }
 
        
     
     
-
-        
-        
 
     return (
         <Fragment>

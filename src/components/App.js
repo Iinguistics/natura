@@ -9,14 +9,11 @@ function App() {
   const [eventId, setEventId] = useState(null);
 
   
-   
   const eventIdHandler = async (id)=>{
     setEventId(id);
-    const res  = await fetch(`https://eonet.sci.gsfc.nasa.gov/api/v3/categories/${id}`);
+    const res = await fetch(`https://eonet.sci.gsfc.nasa.gov/api/v3/categories/${id}`);
     const { events } = await res.json();
        setEventData(events);
-
-
   };
 
   

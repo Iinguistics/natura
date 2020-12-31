@@ -23,7 +23,6 @@ const Category = ({ eventId }) => {
    
     return (
         <Fragment>
-            
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
 
                 <div className="content hidden lg:block"> 
@@ -182,7 +181,6 @@ const Category = ({ eventId }) => {
                 </div>
               
                 </div>
-            
         </Fragment>
         
     )
