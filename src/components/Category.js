@@ -138,8 +138,9 @@ const Category = ({ eventId }) => {
                 </Link>
                 </div>
                 <div className="content lg:hidden">
-                <Link to="/map" onClick={()=>categoryHandler("waterColor")}><img src={ waterColorImg } alt ="red tide" /></Link>
+                <Link to="/map" onClick={()=>categoryHandler("waterColor")}><img src={ waterColorImg } alt ="red tide" />
                 <div className="text">Water Color</div>
+                </Link>
                 </div>
 
                 <div className="content hidden lg:block" > 
