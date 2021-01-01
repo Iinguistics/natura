@@ -5,7 +5,7 @@ import LocationMarker from './LocationMarker';
 import LocationInfo from './LocationInfo';
 import MapHeader from './MapHeader';
 
-const WildfireMap = ({ events, center, zoom, categoryId }) => {
+const Map = ({ events, center, zoom, categoryId }) => {
     const [locationInfo, setLocationInfo] = useState(null);
 
 
@@ -43,7 +43,7 @@ const WildfireMap = ({ events, center, zoom, categoryId }) => {
     )
 }
 
-WildfireMap.defaultProps = {
+Map.defaultProps = {
   center: {
       lat: 42.3265,
       lng: -122.8756
@@ -51,4 +51,4 @@ WildfireMap.defaultProps = {
   zoom: 6
 }
 
-export default WildfireMap
+export default Map
